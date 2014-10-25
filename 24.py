@@ -5,6 +5,7 @@ import random
 # need to control how users input numbers so that if they don't space the right away it still works
 # need to have an option to keep playing so use while loop
 # need to figure out a way to generate solvable sets of 24
+# also this is apparently a thing dc -e "6 2 2 1 * * * f"
 
 ops, nums = [], []
 solvable = {1 : (5, 6, 1, 2), 2 : (8, 11, 8, 1), 3: (6, 2, 2, 1), 
@@ -95,6 +96,7 @@ def math_time(ops, nums):
 
 def play_again():
 	answer = raw_input("Do you want to play again? Y/N")
+	answer.rstrip()
 	if answer == 'Y':
 		challenge_numbers()
 	else: 
